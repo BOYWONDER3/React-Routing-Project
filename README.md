@@ -27,4 +27,4 @@ The API has the following endpoints:
 10. On the Post page render out all of the comments for that post as well as the name for the user that created the post. Make the user name is a link to the user page.
 11. On the User page render out all of the posts that user created in a grid format as well as all the todos that user has in a list format.
 
-### This project is still production and the yet to be deployed in development, once deployed, the link to the site will be posted here, Thank You. 
+### This project is still in development and the yet to be deployed in production, once deployed, the link to the site will be posted here, Thank You. 
