@@ -9,7 +9,7 @@ function PostList() {
       <h1 class="page-title">Posts</h1>
       <div class="card-grid">
         {posts.map((post) => (
-          <div class="card">
+          <div key={post.id} class="card">
             <div class="card-header">{post.title}</div>
             <div class="card-body">
               <div class="card-preview-text">{post.body}</div>
