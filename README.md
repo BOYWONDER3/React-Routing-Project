@@ -27,4 +27,4 @@ The API has the following endpoints:
 10. On the Post page render out all of the comments for that post as well as the name for the user that created the post. Make the user name is a link to the user page.
 11. On the User page render out all of the posts that user created in a grid format as well as all the todos that user has in a list format.
 
-### This project is still in development and the yet to be deployed in production, once deployed, the link to the site will be posted here, Thank You. 
+### This project is deployed in production, ( https://64b8675525c4c10676bd0e34--stately-starburst-2e52ac.netlify.app/posts ) and can be viewed here. Deployed in production is a client only demo which means all data on the page is stored locally instead of accessing an API, that is The API in this project isn't really like a real API as it is using json-server which is essentially an easy way to create a fake API/DB locally. 
