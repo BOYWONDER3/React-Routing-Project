@@ -14,8 +14,8 @@ function User() {
         <b>Website:</b> {user.website}
       </div>
       <div>
-        <b>Address:</b> {user.adress.street} {user.adress.suite}{" "}
-        {user.adress.city} {user.adress.zipcode}
+        <b>Address:</b> {user.address.street} {user.address.suite}{" "}
+        {user.address.city} {user.address.zipcode}
       </div>
     </>
   );
