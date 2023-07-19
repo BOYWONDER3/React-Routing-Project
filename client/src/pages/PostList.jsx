@@ -1,5 +1,6 @@
-import { Link, useLoaderData } from "react-router-dom";
-import { getPosts } from '../api/posts.js'
+import { useLoaderData } from "react-router-dom";
+import { getPosts } from "../api/posts.js";
+import { PostCard } from "../components/PostCard";
 
 function PostList() {
   const posts = useLoaderData();
@@ -9,17 +10,7 @@ function PostList() {
       <h1 class="page-title">Posts</h1>
       <div class="card-grid">
         {posts.map((post) => (
-          <div key={post.id} class="card">
-            <div class="card-header">{post.title}</div>
-            <div class="card-body">
-              <div class="card-preview-text">{post.body}</div>
-            </div>
-            <div class="card-footer">
-              <Link class="btn" to={`/posts/${post.id}`}>
-                View
-              </Link>
-            </div>
-          </div>
+          <PostCard key={post.id} {...post} />
         ))}
       </div>
     </>
@@ -27,7 +18,7 @@ function PostList() {
 }
 
 function loader({ request: { signal } }) {
-  return getPosts({ signal })
+  return getPosts({ signal });
 }
 
 export const PostListRoute = {
