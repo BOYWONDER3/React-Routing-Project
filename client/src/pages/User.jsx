@@ -2,6 +2,8 @@ import { useLoaderData } from "react-router-dom";
 import { getUser } from "../api/users";
 import { getPosts } from "../api/posts";
 import { getTodos } from "../api/todos";
+import { PostCard } from "../components/PostCard";
+import { TodoItem } from "../components/TodoItem";
 
 function User() {
   const { user, posts, todos } = useLoaderData();
@@ -40,7 +42,7 @@ function User() {
 async function loader({ request: { signal }, params: { userId } }) {
   const posts = getPosts({ signal, params: { userId } });
   const todos = getTodos({ signal, params: { userId } });
-  const user = getUser(params.userId, { signal });
+  const user = getUser(userId, { signal });
 
   return { posts: await posts, todos: await todos, user: await user };
 }
